@@ -23,3 +23,26 @@ Students should understand how unidirectional state flow can be implemented in a
 ## Suggested next step
 
 Integrate this into an existing MAUI solution with a `Core` project for state/actions/reducer and a MAUI project for views and viewmodels.
+
+## Run locally
+
+1. Change into the app folder.
+2. Restore dependencies.
+3. Build and run for your target platform.
+
+```bash
+cd app
+dotnet restore
+dotnet build
+dotnet run -f net10.0-maccatalyst
+```
+
+## Shared counter state example
+
+This repository uses the same teaching example as the sibling stacks:
+
+- `src/CounterState.cs`
+- `src/CounterAction.cs`
+- `src/CounterReducer.cs`
+
+The goal is a side-by-side comparison of identical state and reducer logic across MAUI MVVM, MAUI Reactor-style MVU, and Uno MVUX-oriented demos.
